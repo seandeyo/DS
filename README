@@ -13,7 +13,7 @@ To run: ./ds netfile D epsilon beta maxiter iterstride stoperr trials id
     iterstride - the number of iterations to skip between each print to the .err file (must be at least 1 and at most equal to maxiter)
     stoperr - the error at which the algorithm will stop and declare it has found a solution; start with a small nonzero value like 0.001
     name - the name for the output files (name.err, name.sol, name.stats)
-An example run: ./ds q8 5 0. .5 100000 100 .001 10 test
+An example run: ./ds q8 5 0. .5 10000 100 .001 10 test
 For a reminder of these parameters, simply run "./ds" without any arguments.
 ****************************************************************************************************
 The net file should have the following format:

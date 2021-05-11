@@ -238,17 +238,19 @@ int solve(int maxiter,int iterstride,double stoperr)
 		RRR();
 		
 		if(iter%iterstride==0)
-			{
-			for(n=0;n<nodes;++n)
-				fprintf(fp,"%.6f,",yB[n]/eta);
-			fprintf(fp,"%.6f,%.6f,%.6f\n",xerr,yerr,eta);
-			}
+			fprintf(fp,"%.6f\n",sqrt(sq(xerr)+sq(yerr)));
+			//{
+			//for(n=0;n<nodes;++n)
+			//	fprintf(fp,"%.6f,",yB[n]/eta);
+			//fprintf(fp,"%.6f,%.6f,%.6f\n",xerr,yerr,eta);
+			//}
 		
 		if(xerr+yerr<stoperr)
 			{
-			for(n=0;n<nodes;++n)
-				fprintf(fp,"%.6f,",yB[n]/eta);
-			fprintf(fp,"%.6f,%.6f,%.6f\n",xerr,yerr,eta);
+			fprintf(fp,"%.6f\n",sqrt(sq(xerr)+sq(yerr)));
+			//for(n=0;n<nodes;++n)
+			//	fprintf(fp,"%.6f,",yB[n]/eta);
+			//fprintf(fp,"%.6f,%.6f,%.6f\n",xerr,yerr,eta);
 			fclose(fp);
 			return iter;
 			}

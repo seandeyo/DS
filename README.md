@@ -1,6 +1,5 @@
-# DS (dominating sets)
-The algorithm in ds.c finds a dominating set for a given network --- a subset of the network such that every node in the complete network is either in the dominating subset or shares an edge with a member of the subset.  
-It generates output files ending .err, .sol, and .stats that contain, respectively, a log of the errors and variable states throughout the search, the vertex numbers in the dominating set (if found), and statistics on the performance of the algorithm.
+# Dominating Sets
+This repository demonstrates the use of iterative projection methods to solve a classic discrete problem: finding dominating sets. For a given network, a dominating set is a subset of the network such that every node in the complete network is either in the dominating subset or shares an edge with a member of the subset. The algorithm in `ds.c` is one way of finding dominating sets. See arXiv:2106.05206 for details.  
 
 To compile: `gcc -O2 ds.c -lm -o ds`  
 To run: `./ds netfile D epsilon beta maxiter iterstride stoperr trials id`  
@@ -14,9 +13,9 @@ To run: `./ds netfile D epsilon beta maxiter iterstride stoperr trials id`
 - `name`: the name for the output files (name.err, name.sol, name.stats)  
 
 An example run: `./ds queens/q8 5 0. .5 10000 100 .001 10 test`  
-For a reminder of these parameters, simply run `./ds` without any arguments.
+For a reminder of these parameters, simply run `./ds` without any arguments. The program generates output files ending .err, .sol, and .stats that contain, respectively, a log of the errors and variable states throughout the search, the vertex numbers in the dominating set (if found), and statistics on the performance of the algorithm.  
 
-## The net file
+## Network File Format
 The net file should have the following format:  
 `number of nodes`  
 (empty line)  

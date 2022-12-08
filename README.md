@@ -13,7 +13,7 @@ To run: `./ds netfile D epsilon beta maxiter iterstride stoperr trials id`
 - `stoperr`: the error at which the algorithm will stop and declare it has found a solution; try a small nonzero value like 0.001  
 - `name`: the name for the output files (name.err, name.sol, name.stats)  
 
-An example run: `./ds q8 5 0. .5 10000 100 .001 10 test`  
+An example run: `./ds queens/q8 5 0. .5 10000 100 .001 10 test`  
 For a reminder of these parameters, simply run `./ds` without any arguments.
 
 ## The net file
@@ -26,4 +26,4 @@ The net file should have the following format:
 (list of nodes connected to node 1, separated by SPACE)  
 ...  
 
-As an example, q8 is the net file for the 8x8 queen's graph.
+As an example, `q8` in the `queens` folder is the net file for the 8x8 queen's graph.

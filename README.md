@@ -1,5 +1,5 @@
 # DS (dominating sets)
-ds.c finds a dominating set for a given network.
+The algorithm in ds.c finds a dominating set for a given network --- a subset of the network such that every node in the complete network is either in the dominating subset or shares an edge with a member of the subset.  
 It generates output files ending .err, .sol, and .stats that contain, respectively, a log of the errors and variable states throughout the search, the vertex numbers in the dominating set (if found), and statistics on the performance of the algorithm.
 
 To compile: `gcc -O2 ds.c -lm -o ds`  
